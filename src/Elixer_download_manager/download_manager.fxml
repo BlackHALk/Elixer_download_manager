@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane id="main_panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Elixer_download_manager.Controller">
+   <children>
+      <SplitPane dividerPositions="0.24101198402130491" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="780.0">
+         <items>
+            <AnchorPane id="menu_panel" minHeight="0.0" minWidth="0.0" prefHeight="536.0" prefWidth="185.0">
+               <children>
+                  <TreeView layoutX="-22.0" layoutY="13.0" prefHeight="555.0" prefWidth="185.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="13.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <SplitPane id="control_main_panel" dividerPositions="0.22542372881355932" layoutX="194.0" layoutY="196.0" orientation="VERTICAL" prefHeight="592.0" prefWidth="567.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <AnchorPane id="url_panel" minHeight="0.0" minWidth="0.0" prefHeight="151.0" prefWidth="585.0">
+                           <children>
+                              <HBox id="s" layoutX="9.0" layoutY="91.0" spacing="5.0">
+                                 <children>
+                                    <TextField id="url" fx:id="url" layoutX="9.0" layoutY="91.0" opacity="0.87" prefHeight="25.0" prefWidth="465.0" promptText="Enter URL">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </TextField>
+                                    <Region HBox.hgrow="ALWAYS" />
+                                    <Button id="download" fx:id="download" alignment="TOP_CENTER" layoutX="480.0" layoutY="91.0" mnemonicParsing="false" onAction="#downloadBtn" text="Download" textAlignment="CENTER" wrapText="true" />
+                                 </children>
+                              </HBox>
+                              <Label id="label" alignment="TOP_CENTER" graphicTextGap="50.0" layoutY="14.0" opacity="0.96" prefHeight="31.0" prefWidth="567.0" text="ELIXOR DOWNLOAD MANAGER" textAlignment="CENTER" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+                                 <font>
+                                    <Font name="Bodoni MT Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <ListView id="download_queue" layoutX="167.0" layoutY="26.0" prefHeight="409.0" prefWidth="585.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0" />
+                              <MenuBar layoutX="1.0" layoutY="1.0" prefHeight="25.0" prefWidth="585.0">
+                                <menus>
+                                  <Menu mnemonicParsing="false" text="Start" />
+                                  <Menu mnemonicParsing="false" text="Pause" />
+                                  <Menu mnemonicParsing="false" text="Stop" />
+                                </menus>
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                              </MenuBar>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <MenuBar prefHeight="25.0" prefWidth="780.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Settings">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+        </menus>
+         <effect>
+            <Glow />
+         </effect>
+      </MenuBar>
+   </children>
+</Pane>
